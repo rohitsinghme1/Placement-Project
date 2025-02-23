@@ -1,9 +1,17 @@
 import React, { useState } from "react";
+import {useNavigate} from "react-router-dom";
+import "./Student_login.css"
 
 const StudentLogin = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
+    const navigate = useNavigate();
+
+    const handelLogin = (t) => {
+        t.preventDefault();
+        navigate("/University_Login");
+    }
 
 
     const handleSubmit = (e) => {
@@ -52,7 +60,7 @@ const StudentLogin = () => {
                                                     <p className="mb-0 mt-4 text-center"><a href="#0" className="link">Forgot
                                                         your password?</a></p>
                                                 </div>
-                                                <a href="#" className="footer-link">University</a>
+                                                <a href="/University_Login" onClick={handelLogin} className="footer-link">University</a>
                                             </div>
                                         </div>
                                         <div className="card-back">
