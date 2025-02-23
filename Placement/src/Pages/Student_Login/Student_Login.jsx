@@ -1,9 +1,18 @@
 import React, { useState } from "react";
+import "./Student_login.css"
+import {useNavigate} from "react-router-dom";
+
 
 const StudentLogin = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
+    const navigate = useNavigate();
+
+    const handellogin = (t) =>{
+       t.preventDefault();
+        navigate("/University_Login");
+    }
 
 
     const handleSubmit = (e) => {
@@ -15,8 +24,6 @@ const StudentLogin = () => {
 
     return (
         <div>
-
-
             <div className="section">
                 <div className="container">
                     <div className="row full-height justify-content-center">
@@ -52,7 +59,7 @@ const StudentLogin = () => {
                                                     <p className="mb-0 mt-4 text-center"><a href="#0" className="link">Forgot
                                                         your password?</a></p>
                                                 </div>
-                                                <a href="#" className="footer-link">University</a>
+                                                <a href="/University_Login" onClick={handellogin} className="footer-link">University</a>
                                             </div>
                                         </div>
                                         <div className="card-back">
