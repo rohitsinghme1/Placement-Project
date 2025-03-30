@@ -1,4 +1,7 @@
-
+.App {
+  background: #ffffff;
+  text-align: center;
+}
 
 #root {
   max-width: 1280px;
