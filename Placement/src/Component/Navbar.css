@@ -1,0 +1,103 @@
+/* Navbar.css */
+
+/* Logo Dot */
+.logo-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ffeba7; /* Orange */
+    border-radius: 50%;
+}
+
+/* Active Navigation Button */
+.btn-warning {
+    background-color: #ffeba7;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #ffeba7;
+}
+
+/* Outline Light Buttons */
+.btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline-light:hover {
+    background-color: #102770;
+    color: #ffffff;
+}
+
+/* Help Button Hover */
+.btn-outline-light:hover .lucide-icon {
+    stroke: #ffeba7;
+}
+
+/* Scrollbar Hidden for Navbar */
+.nav {
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+.nav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+/* Adjustments for Responsiveness */
+@media (max-width: 768px) {
+    .vh-100 {
+        height: auto;
+    }
+}
+
+/* Sidebar Sliding Effect */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 250px;
+    height: 100vh;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+/* Adjust body when sidebar is open */
+body.sidebar-open {
+    margin-left: 250px;
+}
+
+/* Search Bar Styling */
+input[type="text"] {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Top Navbar Styling */
+.d-flex.justify-content-between {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+}
+
+/* User Profile */
+.d-flex.align-items-center span {
+    margin-left: 8px;
+}
+
+/* Responsive Sidebar for Small Screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    body.sidebar-open {
+        margin-left: 200px;
+    }
+}
